@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Random String Generator</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Генератор случайных строк</h1>
+            <form>
+                <div class="string__inner">
+                    <label for="length">Строка должна состоять из
+                        <input type="number" id="length" name="length" min="1" max="100" step="1">
+                        символов</label>
+                </div>
+                <br>
+                <h3>Какие символы могут встречаться в строке</h3>
+                <label for="characters">Символы:</label>
+
+                <div class="checkbox__inner">
+                    <input type="checkbox" id="digits" name="characters" value="digits">
+                    <label for="digits">Цифры</label>
+                </div>
+                <div class="checkbox__inner">
+                    <input type="checkbox" id="uppercase" name="characters" value="uppercase">
+                    <label for="uppercase">Латинские буквы в верхнем регистре</label>
+                </div>
+                <div class="checkbox__inner">
+                    <input type="checkbox" id="lowercase" name="characters" value="lowercase">
+                    <label for="lowercase">Латинские буквы в нижнем регистре</label>
+                </div>
+
+                <br>
+                <input type="button" value="Generate" onclick="generateRandomString()">
+            </form>
+            <hr>
+            <div class="result">
+                <label for="result">Result</label>
+                <input type="text" id="result" readonly>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
